@@ -1,0 +1,117 @@
+
+#vne-cookie-banner {
+  position: fixed;
+  z-index: 99999;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  max-width: 560px;
+  padding: 24px;
+  background: #EFF3F8;
+  color: #1A1D24;
+  border: 1px solid rgba(26, 29, 36, .12);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .18);
+  font-family: "Vela Sans", Arial, sans-serif;
+  display: none;
+}
+
+#vne-cookie-banner.visible {
+  display: block;
+  animation: vne-cookie-in .3s ease-out;
+}
+
+@keyframes vne-cookie-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vne-cookie-title {
+  font-family: "Stolzl", Arial, sans-serif;
+  font-size: 18px;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.vne-cookie-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+.vne-cookie-description a {
+  color: #1A1D24;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.vne-cookie-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.vne-cookie-button {
+  flex: 1;
+  min-width: 130px;
+  border: 1px solid #1A1D24;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.vne-cookie-accept {
+  background: #00F0FF;
+  color: #1A1D24;
+  border-color: #00F0FF;
+}
+
+.vne-cookie-reject {
+  background: transparent;
+  color: #1A1D24;
+}
+
+.vne-cookie-button:hover {
+  opacity: .8;
+}
+
+#vne-cookie-settings {
+  position: fixed;
+  z-index: 99998;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  border: 1px solid #1A1D24;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: #EFF3F8;
+  color: #1A1D24;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#vne-cookie-settings.visible {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  #vne-cookie-banner {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 18px;
+  }
+
+  .vne-cookie-actions {
+    flex-direction: column;
+  }
+}
